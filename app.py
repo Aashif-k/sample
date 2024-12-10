@@ -44,8 +44,8 @@ customer_calls = st.number_input("Number of Customer Service Calls", min_value=0
 # Prediction button
 if st.button("Predict Churn"):
     # Prepare the input array
-    input_data = np.array([
-        account_length, voice_messages, intl_mins, intl_calls, intl_charge,
+    input_data = np.array([state,area_code
+        account_length,voice_plan, voice_messages,intl_plan, intl_mins, intl_calls, intl_charge,
         day_mins, day_calls, day_charge, eve_mins, eve_calls, eve_charge,
         night_mins, night_calls, night_charge, customer_calls
     ]).reshape(1, -1)
