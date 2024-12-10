@@ -21,9 +21,12 @@ st.write("This application predicts whether a customer will churn based on their
 
 # Input features for prediction
 st.header("Customer Details")
-
+state=st.number_input("name of state")
+area_code=st.number_input("area code")
 account_length = st.number_input("Account Length (in days)", min_value=0, max_value=500, value=100)
+voice_plan=st.number_input("voice.plan")
 voice_messages = st.number_input("Number of Voice Messages", min_value=0, max_value=50, value=10)
+intl_plan=st.number_input("intl.plan")
 intl_mins = st.number_input("International Minutes", min_value=0.0, max_value=100.0, value=10.0)
 intl_calls = st.number_input("International Calls", min_value=0, max_value=20, value=5)
 intl_charge = st.number_input("International Charges", min_value=0.0, max_value=50.0, value=5.0)
