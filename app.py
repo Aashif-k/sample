@@ -25,7 +25,7 @@ st.header("Customer Details")
 inp=st.selectbox("select state",options=place)
 for inp in place:
     state=place.index(inp)
-ac=st.selectbox("area code",options='415','408','510')
+ac=st.selectbox("area code",options=['415','408','510'])
 if ac==415:
     area_code=1
 elif ac==408:
