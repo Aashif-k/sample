@@ -14,14 +14,17 @@ import joblib
 
 # Load the trained model
 RFC = joblib.load('churn_model.pkl')  # Ensure the file is in the same directory
-
+# creating an list for state value
+place=['IL','AL','AK','TX','DE','VA','CT','NM','OR','VT','HI','SC','IN','IA','NE','LA','KS','DC','KY','NH','GA','ME','WI','UT','MA','MS','RI','MN','ND','CO','WY','NJ','NC','WA','NV','OH','OK','AR','PA','WV','FL','CA','TN','ID','MI','NY','MT','SD','MD','MO','AZ']
 # Set up the Streamlit app
 st.title("Customer Churn Prediction")
 st.write("This application predicts whether a customer will churn based on their features.")
 
 # Input features for prediction
 st.header("Customer Details")
-state=st.number_input("name of state")
+inp=st.selectbox("select state",option='IL','AL','AK','TX','DE','VA','CT','NM','OR','VT','HI','SC','IN','IA','NE','LA','KS','DC','KY','NH','GA','ME','WI','UT','MA','MS','RI','MN','ND','CO','WY','NJ','NC','WA','NV','OH','OK','AR','PA','WV','FL','CA','TN','ID','MI','NY','MT','SD','MD','MO','AZ')
+for inp in place:
+    state=place.index(inp)
 area_code=st.number_input("area code")
 account_length = st.number_input("Account Length (in days)", min_value=0, max_value=500, value=100)
 voice_plan=st.number_input("voice.plan")
