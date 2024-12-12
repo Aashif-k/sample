@@ -25,7 +25,13 @@ st.header("Customer Details")
 inp=st.selectbox("select state",options=place)
 for inp in place:
     state=place.index(inp)
-area_code=st.number_input("area code")
+ac=st.selectbox("area code",options='415','408','510')
+if ac==415:
+    area_code=1
+elif ac==408:
+    area_code=2
+else:
+    area_code=0
 account_length = st.number_input("Account Length (in days)", min_value=0, max_value=500, value=100)
 voice_plan=st.number_input("voice.plan")
 voice_messages = st.number_input("Number of Voice Messages", min_value=0, max_value=50, value=10)
