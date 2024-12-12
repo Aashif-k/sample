@@ -33,9 +33,17 @@ elif ac==408:
 else:
     area_code=0
 account_length = st.number_input("Account Length (in days)", min_value=0, max_value=500, value=100)
-voice_plan=st.number_input("voice.plan")
+Text=st.selectbox("voice.plan",options=['Yes','No'])
+  if Text =='Yes':
+      voice_plan=1
+  else:
+      voice_plan=0
 voice_messages = st.number_input("Number of Voice Messages", min_value=0, max_value=50, value=10)
-intl_plan=st.number_input("intl.plan")
+ intp=st.selectbox("intl.plan",options=['Yes','No'])
+  if intp == 'Yes':
+    intl_plan=1
+  else:
+    intl_plan=0
 intl_mins = st.number_input("International Minutes", min_value=0.0, max_value=100.0, value=10.0)
 intl_calls = st.number_input("International Calls", min_value=0, max_value=20, value=5)
 intl_charge = st.number_input("International Charges", min_value=0.0, max_value=50.0, value=5.0)
