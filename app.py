@@ -22,7 +22,7 @@ st.write("This application predicts whether a customer will churn based on their
 
 # Input features for prediction
 st.header("Customer Details")
-inp=st.selectbox("select state",option='IL','AL','AK','TX','DE','VA','CT','NM','OR','VT','HI','SC','IN','IA','NE','LA','KS','DC','KY','NH','GA','ME','WI','UT','MA','MS','RI','MN','ND','CO','WY','NJ','NC','WA','NV','OH','OK','AR','PA','WV','FL','CA','TN','ID','MI','NY','MT','SD','MD','MO','AZ')
+inp=st.selectbox("select state",options=['IL','AL','AK','TX','DE','VA','CT','NM','OR','VT','HI','SC','IN','IA','NE','LA','KS','DC','KY','NH','GA','ME','WI','UT','MA','MS','RI','MN','ND','CO','WY','NJ','NC','WA','NV','OH','OK','AR','PA','WV','FL','CA','TN','ID','MI','NY','MT','SD','MD','MO','AZ'])
 for inp in place:
     state=place.index(inp)
 area_code=st.number_input("area code")
