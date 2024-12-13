@@ -25,7 +25,7 @@ st.header("Customer Details")
 page_bg_img = '''
 <style>
 body {
-background-image: url(photo-1542281286-9e0a16bb7366);
+background-image: url("photo-1542281286-9e0a16bb7366");
 background-size: cover;
 }
 </style>
