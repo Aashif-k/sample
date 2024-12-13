@@ -34,7 +34,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 inp=st.sidebar.selectbox("select state",options=place)
 for i in place:
     if i==inp:
-        state=place.index(inp)
+        state=place.index(i)
     else:
         i+=1
 ac=st.sidebar.selectbox("area code",options=['415','408','510'])
