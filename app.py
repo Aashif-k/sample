@@ -22,7 +22,6 @@ st.write("This application predicts whether a customer will churn based on their
 
 # Input features for prediction
 st.sidebar.success("")
-st.header("Customer Details")
 inp=st.selectbox("select state",options=place)
 for inp in place:
     state=place.index(inp)
