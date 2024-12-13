@@ -21,45 +21,45 @@ st.title("Customer Churn Prediction")
 st.write("This application predicts whether a customer will churn based on their features.")
 
 # Input features for prediction
-st.sidebar.header("Customer Details")
-inp=st.selectbox("select state",options=place)
+st.header("Customer Details")
+inp=st.sidebar.selectbox("select state",options=place)
 for inp in place:
     state=place.index(inp)
-ac=st.selectbox("area code",options=['415','408','510'])
+ac=st.sidebar.selectbox("area code",options=['415','408','510'])
 if ac==415:
     area_code=1
 elif ac==408:
     area_code=2
 else:
     area_code=0
-account_length = st.number_input("Account Length (in days)", min_value=0, max_value=500, value=100)
-Text=st.selectbox("voice.plan",options=['Yes','No'])
+account_length = st.sidebar.number_input("Account Length (in days)", min_value=0, max_value=500, value=100)
+Text=st.sidebar.selectbox("voice.plan",options=['Yes','No'])
 if Text =='Yes':
     voice_plan=1
 else:
     voice_plan=0
-voice_messages = st.number_input("Number of Voice Messages", min_value=0, max_value=50, value=10)
-intp=st.selectbox("intl.plan",options=['Yes','No'])
+voice_messages = st.sidebar.number_input("Number of Voice Messages", min_value=0, max_value=50, value=10)
+intp=st.sidebar.selectbox("intl.plan",options=['Yes','No'])
 if intp == 'Yes':
     intl_plan=1
 else:
     intl_plan=0
-intl_mins = st.number_input("International Minutes", min_value=0.0, max_value=100.0, value=10.0)
-intl_calls = st.number_input("International Calls", min_value=0, max_value=20, value=5)
-intl_charge = st.number_input("International Charges", min_value=0.0, max_value=50.0, value=5.0)
-day_mins = st.number_input("Day Minutes", min_value=0.0, max_value=500.0, value=100.0)
-day_calls = st.number_input("Day Calls", min_value=0, max_value=200, value=50)
-day_charge = st.number_input("Day Charge", min_value=0.0, max_value=100.0, value=10.0)
-eve_mins = st.number_input("Evening Minutes", min_value=0.0, max_value=500.0, value=100.0)
-eve_calls = st.number_input("Evening Calls", min_value=0, max_value=200, value=50)
-eve_charge = st.number_input("Evening Charge", min_value=0.0, max_value=100.0, value=10.0)
-night_mins = st.number_input("Night Minutes", min_value=0.0, max_value=500.0, value=100.0)
-night_calls = st.number_input("Night Calls", min_value=0, max_value=200, value=50)
-night_charge = st.number_input("Night Charge", min_value=0.0, max_value=100.0, value=10.0)
-customer_calls = st.number_input("Number of Customer Service Calls", min_value=0, max_value=20, value=1)
+intl_mins = st.sidebar.number_input("International Minutes", min_value=0.0, max_value=100.0, value=10.0)
+intl_calls = st.sidebar.number_input("International Calls", min_value=0, max_value=20, value=5)
+intl_charge = st.sidebar.number_input("International Charges", min_value=0.0, max_value=50.0, value=5.0)
+day_mins = st.sidebar.number_input("Day Minutes", min_value=0.0, max_value=500.0, value=100.0)
+day_calls = st.sidebar.number_input("Day Calls", min_value=0, max_value=200, value=50)
+day_charge = st.sidebar.number_input("Day Charge", min_value=0.0, max_value=100.0, value=10.0)
+eve_mins = st.sidebar.number_input("Evening Minutes", min_value=0.0, max_value=500.0, value=100.0)
+eve_calls = st.sidebar.number_input("Evening Calls", min_value=0, max_value=200, value=50)
+eve_charge = st.sidebar.number_input("Evening Charge", min_value=0.0, max_value=100.0, value=10.0)
+night_mins = st.sidebar.number_input("Night Minutes", min_value=0.0, max_value=500.0, value=100.0)
+night_calls = st.sidebar.number_input("Night Calls", min_value=0, max_value=200, value=50)
+night_charge = st.sidebar.number_input("Night Charge", min_value=0.0, max_value=100.0, value=10.0)
+customer_calls = st.sidebar.number_input("Number of Customer Service Calls", min_value=0, max_value=20, value=1)
 
 # Prediction button
-if st.button("Predict Churn"):
+if st.sidebar.button("Predict Churn"):
     # Prepare the input array
     input_data = np.array([state,area_code,
         account_length,voice_plan, voice_messages,intl_plan, intl_mins, intl_calls, intl_charge,
