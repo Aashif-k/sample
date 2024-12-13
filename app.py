@@ -21,17 +21,16 @@ st.title("Customer Churn Prediction")
 st.write("This application predicts whether a customer will churn based on their features.")
 
 # Input features for prediction
+st.header("Customer Details")
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366');
 background-size: cover;
 }
 </style>
 '''
-
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.header("Customer Details")
 inp=st.sidebar.selectbox("select state",options=place)
 for inp in place:
     state=place.index(inp)
