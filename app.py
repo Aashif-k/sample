@@ -21,6 +21,7 @@ st.title("Customer Churn Prediction")
 st.write("This application predicts whether a customer will churn based on their features.")
 
 # Input features for prediction
+st.sidebar.sucess("")
 st.header("Customer Details")
 inp=st.selectbox("select state",options=place)
 for inp in place:
