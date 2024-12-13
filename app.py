@@ -32,8 +32,11 @@ background-size: cover;
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 inp=st.sidebar.selectbox("select state",options=place)
-for inp in place:
-    state=place.index(inp)
+for i in place:
+    if i==inp:
+        state=place.index(inp)
+    else:
+        i+=1
 ac=st.sidebar.selectbox("area code",options=['415','408','510'])
 if ac==415:
     area_code=1
